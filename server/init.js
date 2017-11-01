@@ -1,10 +1,12 @@
-import {Packages, Shops} from "/lib/collections";
-import {Hooks, Reaction, Logger} from "/server/api";
-import {check} from "meteor/check";
+import { Packages, Shops } from "/lib/collections";
+import { Hooks, Reaction, Logger } from "/server/api";
+import { check } from "meteor/check";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
+
   Logger.info("::: Modifying checkout workflow");
+
   Packages.update({
     name: "reaction-checkout",
     layout: {
@@ -23,25 +25,28 @@ function modifyCheckoutWorkflow() {
 function addRolesToVisitors() {
   // Add the about permission to all default roles since it's available to all
   Logger.info("::: Adding about route permissions to default roles");
-  const shop = Shops.findOne(Reaction.getShopId());
-  Shops.update(shop._id, {
-    $addToSet: { defaultVisitorRole: "about" }
-  });
-  Shops.update(shop._id, {
-    $addToSet: { defaultRole: "about" }
+
+  Reaction.addRolesToGroups({
+    allShops: true,
+    groups: ["guest", "customer"],
+    roles: ["about"]
   });
 }
 
 function changeLayouts(shopId, newLayout) {
   check(shopId, String);
   check(newLayout, String);
+
   Logger.info(`::: changing all layouts to ${newLayout}`);
-  let shop = Shops.findOne(shopId);
-  for (let i = 0; i < shop.layout.length; i++) {
-    shop.layout[i].layout = newLayout;
-  }
+
+  const shop = Shops.findOne(shopId);
+
+  shop.layout.forEach((currentLayout) => {
+    currentLayout.layout = newLayout;
+  });
+
   return Shops.update(shopId, {
-    $set: {layout: shop.layout}
+    $set: { layout: shop.layout }
   });
 }
 

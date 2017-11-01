@@ -34,16 +34,16 @@ Reaction.registerPackage({
   settings: {
     public: [
       {
-        images: 'images/hero/'
+        images: "images/hero/"
       },
       {
-        images: 'images/editorial/'
+        images: "images/editorial/"
       },
       {
-        images: 'images/ajax-loader.gif'
+        images: "images/ajax-loader.gif"
       },
       {
-        fonts: 'fonts/'
+        fonts: "fonts/"
       }
     ],
     npm: {
