@@ -1,6 +1,6 @@
-#Reaction Plugin Customization Exercise
+# Example Reaction Commerce Theme
 
-This is based off of Brent Hover's [reaction example plugin](https://github.com/reactioncommerce/reaction-example-plugin) starter. Brent is very helpful and hopefully this minimizes the questions he gets asked in the future;) Images in this project are large files, they have yet to be optimized for responsive. Until then, use as is.
+This is based on Hydrotik's [example theme](https://github.com/hydrotik/reaction-hydrotik-plugin), itself based off of Brent Hover's [Reaction example plugin](https://github.com/reactioncommerce/reaction-example-plugin) starter. Brent is very helpful and hopefully this minimizes the questions he gets asked in the future. ;) Images in this project are large files, they have yet to be optimized for responsive. Until then, use as is.
 
 Photography/Product Images/Editorials royalty free by:
 * [pixabay](https://pixabay.com)
