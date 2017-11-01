@@ -1,5 +1,8 @@
 import { Reaction } from "/client/api";
 import { Tags } from "/lib/collections";
+import { getComponent } from "@reactioncommerce/reaction-components";
+
+const NavBar = getComponent("NavBar");
 
 /**
  * layoutHeader events
@@ -16,6 +19,10 @@ Template.layoutHeaderHydrotik.events({
 });
 
 Template.layoutHeaderHydrotik.helpers({
+  NavBar() {
+    return NavBar;
+  },
+
   TagNav() {
     return ReactionUI.TagNav.Components.TagNav;
   },
@@ -51,3 +58,22 @@ Template.layoutHeaderHydrotik.helpers({
     };
   }
 });
+
+
+/**
+ * layoutHeader events
+ */
+// Template.layoutHeader.events({
+//   "click .navbar-accounts .dropdown-toggle": function () {
+//     return setTimeout(function () {
+//       return $("#login-email").focus();
+//     }, 100);
+//   },
+//   "click .header-tag, click .navbar-brand": function () {
+//     return $(".dashboard-navbar-packages ul li").removeClass("active");
+//   }
+// });
+//
+// Template.layoutHeader.helpers({
+//
+// });

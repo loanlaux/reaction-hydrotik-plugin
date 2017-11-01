@@ -1,25 +1,5 @@
 <template name="layoutHeaderHydrotik">
-    {{#if hasDashboardAccess}}
-        <div class="container-fluid nav-fluid">
-          <div class="nav" role="navigation">
-
-            <div class="row">{{> CustomNavigationBar coreNavProps}}</div>
-
-            <div class="row">
-              {{!-- {{> tagNav tagNavProps}} --}}
-            </div>
-          </div>
-        </div>
-    {{else}}
-        <div class="container-fluid nav-fluid">
-          <div class="nav container" role="navigation">
-
-            <div class="row">{{> CustomNavigationBar coreNavProps}}</div>
-
-            <div class="row">
-              {{!-- {{> tagNav tagNavProps}} --}}
-            </div>
-          </div>
-        </div>
-    {{/if}}
+  <div>
+    {{> React component=NavBar}}
+  </div>
 </template>

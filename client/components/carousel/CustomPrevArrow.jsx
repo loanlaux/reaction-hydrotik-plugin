@@ -3,11 +3,20 @@ import React, { Component, PropTypes } from "react";
 class CustomPrevArrow extends Component {
   constructor(props) {
     super(props);
+
+    console.log(props);
   }
 
   render() {
+    const { className, dataRole, onClick } = this.props
+
     return (
-      <div {...this.props} style={{display: 'block'}}></div>
+      <div
+        className={className}
+        data-role={dataRole}
+        onClick={onClick}
+        style={{display: 'block'}}
+      />
     );
   }
 }

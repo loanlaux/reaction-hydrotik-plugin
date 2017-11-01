@@ -3221,7 +3221,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "dashboardPackages",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"notFound": "notFound",
 				"dashboardHeader": "dashboardHeader",
 				"dashboardControls": "dashboardControls",
@@ -3239,7 +3239,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "orders",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"layoutFooter": "layoutFooter",
 				"notFound": "notFound",
 				"dashboardHeader": "dashboardHeader",
@@ -3257,7 +3257,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "completedPDFLayout",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"layoutFooter": "layoutFooter"
 			},
 			"priority": 1,
@@ -3280,7 +3280,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "uiDashboard",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"notFound": "notFound",
 				"dashboardHeader": "dashboardHeader",
 				"adminControlsFooter": "adminControlsFooter"
@@ -3305,7 +3305,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "productDetail",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"notFound": "productNotFound",
 				"dashboardControls": "productDetailDashboardControls",
 				"adminControlsFooter": "adminControlsFooter"
@@ -3321,7 +3321,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "productsLanding",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"layoutFooter": "layoutFooter",
 				"notFound": "productNotFound",
 				"dashboardControls": "dashboardControls",
@@ -3338,7 +3338,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "accountsDashboard",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"notFound": "notFound",
 				"dashboardHeader": "dashboardHeader",
 				"adminControlsFooter": "adminControlsFooter"
@@ -3353,7 +3353,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "products",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"layoutFooter": "layoutFooter",
 				"notFound": "productNotFound",
 				"dashboardControls": "dashboardControls",
@@ -3369,7 +3369,7 @@
 			"enabled": true,
 			"structure": {
 				"template": "unauthorized",
-				"layoutHeader": "layoutHeader",
+				"layoutHeader": "layoutHeaderHydrotik",
 				"layoutFooter": "layoutFooter"
 			},
 			"priority": 1,

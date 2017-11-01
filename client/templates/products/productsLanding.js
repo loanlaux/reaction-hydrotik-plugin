@@ -4,6 +4,7 @@ import { Reaction } from "/client/api";
 import { ReactionProduct } from "/lib/api";
 import { Products, Tags } from "/lib/collections";
 import { ITEMS_INCREMENT } from "/client/config/defaults";
+import ProductsComponent from "/imports/plugins/included/product-variant/containers/productsContainer";
 
 /**
  * loadMoreProducts
@@ -140,6 +141,16 @@ Template.productsLanding.helpers({
     }
 
     return false;
+  },
+
+  Products() {
+    return {
+      component: ProductsComponent,
+      // products: Template.instance().products.get(),
+      // ready: () => {
+      //   console.log("Yolo")
+      // }
+    };
   }
 });
 
@@ -172,10 +183,6 @@ Template.productsLanding.events({
 
 
 /* Home page productsLanding template for home-best-sellers tag */
-
-
-
-
 
 Template.productsLandingIndex.onCreated(function () {
   this.products = ReactiveVar();
@@ -287,6 +294,16 @@ Template.productsLandingIndex.helpers({
     }
 
     return false;
+  },
+
+  Products() {
+    return {
+      component: ProductsComponent,
+      // products: Template.instance().products.get(),
+      // ready: () => {
+      //   console.log("Yolo")
+      // }
+    };
   }
 });
 

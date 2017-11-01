@@ -6,8 +6,15 @@ class CustomNextArrow extends Component {
   }
 
   render() {
+    const { className, dataRole, onClick } = this.props
+
     return (
-      <div {...this.props} style={{display: 'block'}}></div>
+      <div
+        className={className}
+        data-role={dataRole}
+        onClick={onClick}
+        style={{display: 'block'}}
+      />
     );
   }
 }

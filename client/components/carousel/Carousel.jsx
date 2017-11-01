@@ -1,14 +1,15 @@
-import React, { Component, PropTypes } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { CarouselItem } from "./index.js";
-import { map } from 'lodash';
-import Slider from 'react-slick';
+import CarouselItem from "./CarouselItem.jsx";
+import Slider from "react-slick";
 
 class Carousel extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      
+
     };
   }
 
@@ -22,33 +23,39 @@ class Carousel extends Component {
     settings: PropTypes.object
   }
 
-  render() {
-
-    const { slides, settings} = this.props;
+  renderSlides() {
+    const { slides, settings } = this.props;
 
     const carouselStyle = {
-      height: settings.height + 'px'
+      height: settings.height + "px"
     };
 
-    return (
-      <div className='carousel' style={carouselStyle}>
-          <Slider {... settings}>
-            {map(slides, (item, i) => this.renderCarouselSlide(item, i))}
-        </Slider>
-      </div>
-    );
+    const slideComponents = slides.map((item, i) => (
+      <CarouselItem
+        key={i}
+        item={item}
+        type={settings.type}
+        style={carouselStyle}
+        height={settings.height}
+        backgroundColor={settings.backgroundColor}
+      />
+    ));
+
+    return slideComponents;
   }
 
-  renderCarouselSlide(item, i) {
-    const { settings} = this.props;
+  render() {
+    const { slides, settings } = this.props;
 
     const carouselStyle = {
-      height: settings.height + 'px'
+      height: settings.height + "px"
     };
-    
+
     return (
-      <div key={i}>
-        <CarouselItem item={item} type={settings.type} style={carouselStyle} height={settings.height} backgroundColor={settings.backgroundColor} />
+      <div className="carousel" style={carouselStyle}>
+        <Slider {...settings}>
+          {this.renderSlides()}
+        </Slider>
       </div>
     );
   }

@@ -1,6 +1,8 @@
 <template name="productsLanding">
   {{#if ready}}
-    {{>productGrid products=products}}
+    <div>
+      {{> React Products}}
+    </div>
 
     {{#if loadMoreProducts}}
       <div class="product-load-more" id="productScrollLimitLoader">
@@ -22,16 +24,6 @@
     </div>
   {{/if}}
 </template>
-
-<template name="productListGridBeesKnees">
-  <div class="row">
-    {{>productGrid products=products}}
-    {{#if hasPermission "createProduct"}}
-      {{>productList}}
-    {{/if}}
-  </div>
-</template>
-
 
 <template name="productsLandingIndex">
   {{#if hasDashboardAccess}}
@@ -56,12 +48,12 @@
                   </div>
                 </div>
                 <div class="col-sm-6 container-editorial container-editorial--quarter" style="background-image: url('images/editorial/editorial-6.jpg');">
-                  
+
                 </div>
-            </div>        
+            </div>
             <div class="row container-editorial">
                 <div class="col-sm-6 container-editorial container-editorial--quarter" style="background-image: url('images/editorial/editorial-7.jpg');">
-                  
+
                 </div>
                 <div class="col-sm-6 container-editorial container-editorial--quarter" style="background-color:#222533;">
                   <div class="editorial-grid-content">
@@ -75,7 +67,7 @@
         <div class="col-sm-9 container-editorial">
             <div class="row container-editorial">
                 <div class="col-sm-8 container-editorial container-editorial--quarter" style="background-image: url('images/editorial/editorial-2.jpg');">
-                  
+
                 </div>
                 <div class="col-sm-4 container-editorial container-editorial--quarter" style="background-color:#afbabb;">
                   <div class="editorial-grid-content">
@@ -92,7 +84,7 @@
                   </div>
                 </div>
                 <div class="col-sm-8 container-editorial container-editorial--quarter" style="background-image: url('images/editorial/editorial-8.jpg');">
-                  
+
                 </div>
             </div>
         </div>
@@ -106,31 +98,32 @@
     </div>
   {{/if}}
   {{#if ready}}
-
     <div class="container home-best-sellers">
       <div class="row">
-          <div class="col-sm-12">
-            <h3>Best Sellers</h3>
-          </div>
+        <div class="col-sm-12">
+          <h3>Best Sellers</h3>
         </div>
-        <div class="row">
-      {{>productGrid products=products}}
-
-      {{#if loadMoreProducts}}
-        <div class="product-load-more" id="productScrollLimitLoader">
-          <button
-              class="btn btn-inverse btn-block btn-lg"
-              data-i18n="app.loadMoreProducts"
-              data-event-action="loadMoreProducts">Load more products</button>
-        </div>
-      {{/if}}
-    </div>
-
-    {{#unless Template.subscriptionsReady}}
-      <div class="spinner-container">
-        <div class="spinner"></div>
       </div>
-    {{/unless}}
+      <div class="row">
+        <div>
+          {{> React Products}}
+        </div>
+
+        {{#if loadMoreProducts}}
+          <div class="product-load-more" id="productScrollLimitLoader">
+            <button
+                class="btn btn-inverse btn-block btn-lg"
+                data-i18n="app.loadMoreProducts"
+                data-event-action="loadMoreProducts">Load more products</button>
+          </div>
+        {{/if}}
+      </div>
+
+      {{#unless Template.subscriptionsReady}}
+        <div class="spinner-container">
+          <div class="spinner"></div>
+        </div>
+      {{/unless}}
     </div>
   {{else}}
     <div class="spinner-container spinner-container-lg">

@@ -15,13 +15,13 @@ Reaction.registerPackage({
     }
   ],
   layout: [{
-    layout: "coreLayoutHydrotik",
+    layout: "coreLayout",
     workflow: "coreWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
     structure: {
-      template: "productsLanding",
+      template: "productDetail",
       layoutHeader: "layoutHeaderHydrotik",
       layoutFooter: "layoutFooterHydrotik",
       notFound: "productNotFound",
@@ -29,8 +29,8 @@ Reaction.registerPackage({
       dashboardControls: "dashboardControls",
       dashboardHeaderControls: "",
       adminControlsFooter: "adminControlsFooter"
-    } }
-  ],
+    }
+  }],
   settings: {
     public: [
       {
