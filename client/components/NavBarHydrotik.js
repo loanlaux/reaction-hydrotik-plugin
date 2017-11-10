@@ -4,7 +4,7 @@ import {
   getRawComponent,
   replaceComponent,
   copyHOCs
-} from "@reactioncommerce/reaction-components";
+} from "/imports/plugins/core/components/lib";
 
 const NavBar = getRawComponent("NavBar");
 

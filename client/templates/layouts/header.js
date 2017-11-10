@@ -1,6 +1,6 @@
 import { Reaction } from "/client/api";
 import { Tags } from "/lib/collections";
-import { getComponent } from "@reactioncommerce/reaction-components";
+import { getComponent } from "/imports/plugins/core/components/lib";
 
 const NavBar = getComponent("NavBar");
 

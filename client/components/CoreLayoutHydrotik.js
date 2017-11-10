@@ -1,8 +1,10 @@
 import React from "react";
 import classnames from "classnames";
-import { Components, replaceComponent } from "@reactioncommerce/reaction-components";
+import { Components, replaceComponent } from "/imports/plugins/core/components/lib";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
+
+import PromoContainer from "../containers/PromoContainer";
 
 const CoreLayoutHydrotik = ({ actionViewIsOpen, structure }) => {
   const { layoutFooter, template } = structure || {};
@@ -14,7 +16,7 @@ const CoreLayoutHydrotik = ({ actionViewIsOpen, structure }) => {
 
   return (
     <div className={pageClassName} id="reactionAppContainer">
-      <Blaze template={"CustomPromo"} />
+      <PromoContainer />
 
       <Components.NavBar />
 

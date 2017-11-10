@@ -4,7 +4,9 @@ import { Reaction } from "/client/api";
 import { ReactionProduct } from "/lib/api";
 import { Products, Tags } from "/lib/collections";
 import { ITEMS_INCREMENT } from "/client/config/defaults";
+
 import ProductsComponent from "/imports/plugins/included/product-variant/containers/productsContainer";
+import HeroContainer from "../../containers/HeroContainer";
 
 /**
  * loadMoreProducts
@@ -303,6 +305,12 @@ Template.productsLandingIndex.helpers({
       // ready: () => {
       //   console.log("Yolo")
       // }
+    };
+  },
+
+  Hero() {
+    return {
+      component: HeroContainer
     };
   }
 });

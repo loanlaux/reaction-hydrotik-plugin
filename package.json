@@ -1,0 +1,23 @@
+{
+  "name": "reaction-hydrotik-plugin",
+  "version": "1.0.0",
+  "description": "Loan Laux's revamp of Hydrotik's example theme",
+  "main": "register.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loanlaux/reaction-hydrotik-plugin.git"
+  },
+  "author": "Loan Laux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loanlaux/reaction-hydrotik-plugin/issues"
+  },
+  "dependencies": {
+    "react-slick": "^0.15.4",
+    "slick-carousel": "^1.8.1"
+  },
+  "homepage": "https://github.com/loanlaux/reaction-hydrotik-plugin#readme"
+}
