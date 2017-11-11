@@ -14,18 +14,8 @@ reaction reset -n && reaction
 
 ### React Slick Installation (Better process for installing plugin deps?)
 
-```bash
-npm install react-slick
-```
-
-Also install slick-carousel for css and font
-
-```bash
-npm install slick-carousel
-```
-
 **Move files in public to your root public folder**
-You should move some of the react slick static assets into public as well. Not sure of a practical solution to this yet. (See Wants list below)
+You should move some of the react slick static assets into public as well. Not sure of a practical solution to this yet.
 
 
 ### Some helpful things to be aware of:
@@ -50,7 +40,7 @@ git reset HEAD --hard
 ### More helpful things...
 
 * I suggest using [RoboMongo](https://robomongo.org) 
-* Connect with Roboongo and delete the <blank> document under the Shops Collection to see the aboutus.html static template. When you have more than one Document in the Shop Collection, Reaction will insert a shop name into the url path.
+* Connect with RoboMongo and delete the <blank> document under the Shops Collection to see the aboutus.html static template. When you have more than one Document in the Shop Collection, Reaction will insert a shop name into the url path.
 * Git submodules are most helpful when working with Heroku. Reaction Commerce will be your upstream and your instantiated Reaction project will be your origin master. Your plugin will be your submodule and should be editied in .gitmodules. For example:
 ```
 [submodule "reaction-hydrotik-plugin"]
@@ -83,28 +73,3 @@ heroku config:set --app appname BUILDPACK_CLEAR_CACHE=1
 ```bash
 heroku config:set MONGO_URL=mongodb://[username]:[password]@pathtodb.com:[port],pathtodb.com:[port]/heroku_qhm1pvcm?replicaSet=rs-[rsid]
 ```
-
-
-### Roadmap
-- [x] CTA in Hero
-- [x] Hero only on INDEX
-- [ ] Category Left Hand Nav
-- [x] Promo on all pages DEFAULT
-- [ ] Reskin PDP
-- [ ] Image optimization for responsive through Reaction or just as static assets
-- [ ] Category Landing Pages
-- [ ] Hero on Category Landing Pages
-
-### Wants/Hopes from Reaction Commerce
-- [ ] Process for installing NPM deps in plugin as well as static assets to root of Reaction project through Registry settings. (See my stab in register.js - settings)
-- [ ] Membership
-- [ ] Recently Viewed
-- [ ] Product Ratings
-- [ ] Product Reviews
-- [ ] Faceted Search
-- [ ] Group Orders
-- [ ] Ability to create non product content (CMS)
-- [ ] Content Management System from external or internal source that maps to URL structure
-- [ ] SASS
-- [ ] Promo Manager
-- [ ] Category Landing Pages
