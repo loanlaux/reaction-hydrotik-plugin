@@ -1,5 +1,7 @@
 # Example Reaction Commerce Theme
 
+![Screenshot](https://raw.githubusercontent.com/loanlaux/reaction-hydrotik-plugin/master/screenshot.png)
+
 This is based on Hydrotik's [example theme](https://github.com/hydrotik/reaction-hydrotik-plugin), itself based off of Brent Hover's [Reaction example plugin](https://github.com/reactioncommerce/reaction-example-plugin) starter. Brent is very helpful and hopefully this minimizes the questions he gets asked in the future. ;) Images in this project are large files, they have yet to be optimized for responsive. Until then, use as is.
 
 Photography/Product Images/Editorials royalty free by:
@@ -10,7 +12,6 @@ Photography/Product Images/Editorials royalty free by:
 ```bash
 reaction reset -n && reaction
 ```
-
 
 ### React Slick Installation (Better process for installing plugin deps?)
 
