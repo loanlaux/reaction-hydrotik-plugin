@@ -5,23 +5,15 @@ import CarouselItem from "./CarouselItem.jsx";
 import Slider from "react-slick";
 
 class Carousel extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-
-    };
-  }
-
   static defaultProps = {
     slides: [],
     settings: {}
-  }
+  };
 
   static propTypes = {
     slides: PropTypes.array.isRequired,
     settings: PropTypes.object
-  }
+  };
 
   renderSlides() {
     const { slides, settings } = this.props;
@@ -30,7 +22,7 @@ class Carousel extends Component {
       height: settings.height + "px"
     };
 
-    const slideComponents = slides.map((item, i) => (
+    return slides.map((item, i) => (
       <CarouselItem
         key={i}
         item={item}
@@ -40,12 +32,10 @@ class Carousel extends Component {
         backgroundColor={settings.backgroundColor}
       />
     ));
-
-    return slideComponents;
   }
 
   render() {
-    const { slides, settings } = this.props;
+    const { settings } = this.props;
 
     const carouselStyle = {
       height: settings.height + "px"
