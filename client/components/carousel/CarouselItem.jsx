@@ -26,45 +26,29 @@ class CarouselItem extends Component {
     height: PropTypes.number
   };
 
-  renderHeader(prop) {
-    if (prop !== undefined && prop !== "") {
-      return <h2 className="carouselitem__link__content__heading">{prop}</h2>;
-    }
-
-    return "";
-  }
-
-  renderDescription(prop) {
-    if (prop !== undefined && prop !== "") {
-      return <p>{prop}</p>;
-    }
-
-    return "";
-  }
-
-  renderCTA(prop) {
-    if (prop !== undefined && prop !== "") {
-      return <button type="button" className="btn btn-hero">{prop}</button>;
-    }
-
-    return "";
-  }
-
   onItemClick = (e) => {
     e.preventDefault();
-    // window.alert('You clicked ' + this.props.item.href);
-
     location.replace(this.props.item.href);
   };
 
   renderContents(type) {
+    const { cta, description, href, title } = this.props.item;
+
     if (type === "hero") {
       return (
-        <div onClick={this.onItemClick} className="carouselitem__link">
+        <div className="carouselitem__link">
           <div className="carouselitem__link__content">
-            {this.renderHeader(this.props.item.title)}
-            {this.renderDescription(this.props.item.description)}
-            {this.renderCTA(this.props.item.cta)}
+            <h2 className="carouselitem__link__content__heading">{title}</h2>
+            <p>{description}</p>
+            {cta && href &&
+              <a
+                type="button"
+                className="btn btn-hero"
+                href={href}
+              >
+                {cta}
+              </a>
+            }
           </div>
         </div>
       );

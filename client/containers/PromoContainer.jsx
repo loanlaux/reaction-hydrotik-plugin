@@ -20,19 +20,19 @@ const promoSlides = [
   {
     title: "",
     description: "Free shipping on items over $99!",
-    href: "http://www.cnn.com",
+    href: "http://loanlaux.com",
     src: ""
   },
   {
     title: "",
     description: "25% off marked items this week only!",
-    href: "http://www.cnn.com",
+    href: "http://loanlaux.com",
     src: ""
   },
   {
     title: "",
     description: "Sign up for the Reaction card and get 15% off your purchase",
-    href: "http://www.cnn.com",
+    href: "http://loanlaux.com",
     src: ""
   }
 ];

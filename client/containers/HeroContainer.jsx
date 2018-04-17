@@ -19,7 +19,7 @@ const heroSettings = {
 const heroSlides = [
   {
     title: "Slide 1",
-    href: "http://www.google.com",
+    href: "http://loanlaux.com",
     src: 'images/hero/model-600238_1920.jpg',
     cta: "Shop Now"
   },
@@ -32,7 +32,7 @@ const heroSlides = [
   },
   {
     description: "Slide 3 Description",
-    // href: "http://www.google.com",
+    href: "http://loanlaux.com",
     src: 'images/hero/fashion-1636868_1920.jpg',
     cta: "Shop Now"
   }
