@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class CarouselItem extends Component {
   constructor(props) {
@@ -16,45 +17,45 @@ class CarouselItem extends Component {
     type: "",
     height: 600,
     backgroundColor: ""
-  }
+  };
 
   static propTypes = {
-    item: React.PropTypes.object.isRequired,
-    type: React.PropTypes.string.isRequired,
-    backgroundColor: React.PropTypes.string,
-    height: React.PropTypes.number
-  }
+    item: PropTypes.object.isRequired,
+    type: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string,
+    height: PropTypes.number
+  };
 
   renderHeader(prop) {
-    if (prop != undefined && prop != '') {
-      return <h2 className='carouselitem__link__content__heading'>{prop}</h2>;
-    } else{
-      return '';
+    if (prop !== undefined && prop !== "") {
+      return <h2 className="carouselitem__link__content__heading">{prop}</h2>;
     }
+
+    return "";
   }
 
   renderDescription(prop) {
-    if (prop != undefined && prop != '') {
+    if (prop !== undefined && prop !== "") {
       return <p>{prop}</p>;
-    } else {
-      return '';
     }
+
+    return "";
   }
 
   renderCTA(prop) {
-    if (prop != undefined && prop != '') {
+    if (prop !== undefined && prop !== "") {
       return <button type="button" className="btn btn-hero">{prop}</button>;
-    } else {
-      return '';
     }
+
+    return "";
   }
 
-  onItemClick(e) {
+  onItemClick = (e) => {
     e.preventDefault();
     // window.alert('You clicked ' + this.props.item.href);
 
     location.replace(this.props.item.href);
-  }
+  };
 
   renderContents(type) {
     if (type === "hero") {
@@ -80,14 +81,14 @@ class CarouselItem extends Component {
     const { height, type, item, backgroundColor} = this.props;
 
     const divStyle = {
-      height: height + 'px'
+      height: height + "px"
     };
 
-    if (item.hasOwnProperty('src') && item.src != "") {
+    if (item.hasOwnProperty("src") && item.src !== "") {
       divStyle.backgroundImage = 'url(' + this.props.item.src + ')';
     }
 
-    if (backgroundColor != "") {
+    if (backgroundColor !== "") {
       divStyle.backgroundColor = backgroundColor;
     }
 
