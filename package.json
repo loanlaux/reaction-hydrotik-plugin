@@ -16,7 +16,7 @@
     "url": "https://github.com/loanlaux/reaction-hydrotik-plugin/issues"
   },
   "dependencies": {
-    "react-slick": "^0.15.4",
+    "react-slick": "^0.23.1",
     "slick-carousel": "^1.8.1"
   },
   "homepage": "https://github.com/loanlaux/reaction-hydrotik-plugin#readme"
