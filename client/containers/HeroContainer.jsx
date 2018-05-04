@@ -20,20 +20,20 @@ const heroSlides = [
   {
     title: "Slide 1",
     href: "http://loanlaux.com",
-    src: 'images/hero/model-600238_1920.jpg',
+    src: 'plugins/reaction-hydrotik-plugin/images/hero/model-600238_1920.jpg',
     cta: "Shop Now"
   },
   {
     title: "Slide 2",
     description: "Slide 2 Description",
     // href: "http://www.google.com",
-    src: 'images/hero/fashion-1636872_1920.jpg',
+    src: 'plugins/reaction-hydrotik-plugin/images/hero/fashion-1636872_1920.jpg',
     cta: ""
   },
   {
     description: "Slide 3 Description",
     href: "http://loanlaux.com",
-    src: 'images/hero/fashion-1636868_1920.jpg',
+    src: 'plugins/reaction-hydrotik-plugin/images/hero/fashion-1636868_1920.jpg',
     cta: "Shop Now"
   }
 ];
